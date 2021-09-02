@@ -335,7 +335,7 @@ Gui, MyWindow:Add, Text, vgTotal_RunCountID x+2 w50, % gTotal_RunCount
 Gui, MyWindow:Add, Text, x15 y+2 %statTabTxtWidth%, Previous `Run `Time:
 Gui, MyWindow:Add, Text, vgPrevRunTimeID x+2 w50, % gPrevRunTimeF
 Gui, MyWindow:Add, Text, x15 y+2 %statTabTxtWidth%, Fastest `Run `Time:
-Gui, MyWindow:Add, Text, vgFastRunTimeID x+2 w50, gFastRunTimeF
+Gui, MyWindow:Add, Text, vgFastRunTimeID x+2 w50, % gFastRunTimeF
 Gui, MyWindow:Add, Text, x15 y+2 %statTabTxtWidth%, Slowest `Run `Time:
 Gui, MyWindow:Add, Text, vgSlowRunTimeID x+2 w50, % gSlowRunTimeF
 Gui, MyWindow:Add, Text, x15 y+2 %statTabTxtWidth%, Avg. `Run `Time:
