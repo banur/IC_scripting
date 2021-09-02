@@ -126,7 +126,7 @@ global gStackFail := 0
 ;globals for various timers
 global T = 20000101000000
 global gSlowRunTime		:= 		
-global gFastRunTime		:= 100
+global gFastRunTime		:= 22000101000000
 global gRunStartTime 	:=
 global gTotal_RunCount	:= 0
 global gStartTime 		:= 
@@ -1095,7 +1095,7 @@ UpdateStartLoopStats(gLevel_Number)
 			gSlowRunTimeF := gPrevRunTimeF
 			GuiControl, MyWindow:, gSlowRunTimeID, % gSlowRunTimeF
 		}
-		if (gFastRunTime > gPrevRunTime AND !gStackFail)
+		if (gFastRunTime >= gPrevRunTime AND !gStackFail)
 		{
 			gFastRunTime := gPrevRunTime
 			gFastRunTimeF := gPrevRunTimeF
@@ -1379,9 +1379,9 @@ StuffToSpam(SendRight := 1, gLevel_Number := 1, hew := 1, formation := "")
 	if (SendRight)
 	var := "{Right}"
 	if (gCtrlClickLeveling)
-	var := var "{Ctrl down}``{Ctrl up}"
+	var := var "{Ctrl down}{SC027}{Ctrl up}"
 	else if (gClickLeveling)
-	var := var "``"
+    var := var "{SC027}"
 	if (gContinuedLeveling > gLevel_Number)
 	var := var gFKeys
 	if (gHewUlt AND hew)
